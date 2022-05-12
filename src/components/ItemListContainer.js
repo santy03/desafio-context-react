@@ -10,9 +10,9 @@ const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
     const { idCategory } = useParams();
 
-    console.log(idCategory);
+   
 
-    //componentDidUpdate
+   
     useEffect(() => {
         customFetch(2000, products.filter(item => {
             if (idCategory === undefined) return item;
@@ -25,12 +25,11 @@ const ItemListContainer = () => {
     const onAdd = (qty) => {
         alert("You have selected " + qty + " items.");
     }
-    console.log("ItemListContainer",products) 
-    console.log("datos",datos)
+    //console.log("ItemListContainer",products) 
+    //console.log("datos",datos)
     return (
         <>  
             <ItemList items={datos} />
-            <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </>
     )
 }
