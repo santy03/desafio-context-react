@@ -1,30 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
 import { CartContext } from './CartContext';
-import { WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, Hr } from './StyledComponents';
-
-import styled from "styled-components";
-
-const Top = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-`;
-
-const TopButton = styled.button`
-  padding: 10px;
-  font-weight: 600;
-  cursor: pointer;
-  border: ${(props) => props.type === "filled" && "none"};
-  background-color: ${(props) =>
-    props.type === "filled" ? "black" : "gold"};
-  color ${(props) => props.type === "filled" && "white"};
-`;
-
-const TopText = styled.span`
-  margin: 0px 10px;
-`;
+import { WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, Hr, Top, TopButton, TopText } from './StyledComponents';
 
 const Cart = () => {
     const test = useContext(CartContext);
@@ -36,8 +13,8 @@ const Cart = () => {
                 <Link to='/'><TopButton>SEGUIR COMPRANDO</TopButton></Link>
                 {
                     (test.cartList.length > 0)
-                    ? <TopButton type="filled" onClick={test.removeList}>ELIMINAR LOS PRODUCTOS</TopButton>
-                    : <TopText>Tu changuito esta vacìo</TopText>
+                    ? <TopButton type="filled" onClick={test.removeList}  style={{color:"red"}}>ELIMINAR LOS PRODUCTOS</TopButton>
+                    : <TopText>EL CHANGUITO ESTA VACIO</TopText>
                 }
             </Top>
             <ContentCart>
@@ -49,16 +26,16 @@ const Cart = () => {
                             <ImageCart src={item.imgItem} />
                             <Details>
                             <span>
-                                <b>Product:</b> {item.nameItem}
+                                <b>Producto:</b> {item.nameItem}
                             </span>
-                            <TopButton type="filled" onClick={() => test.deleteItem(item.idItem)}>ELIMINAR</TopButton>
+                            <TopButton type="filled" onClick={() => test.deleteItem(item.idItem)}  style={{color:"red"}}>ELIMINAR</TopButton>
                             </Details>
                         </ProductDetail>
                         <PriceDetail>
                             <div>
-                            <p>{item.qtyItem} item(s)</p>
+                            <p>{item.qtyItem} Producto(s)</p>
                             </div>
-                            <ProductPrice>$ {item.costItem} each</ProductPrice>
+                            <ProductPrice>$ {item.costItem} cada uno.</ProductPrice>
                         </PriceDetail>
                         </Product>
                         )

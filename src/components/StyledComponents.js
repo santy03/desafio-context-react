@@ -59,6 +59,19 @@ const Icon = styled.div`
     }
 `;
 
+//ItemCount
+const ProductAmountContainer = styled.div`
+    display: flex;
+    align-items: center;
+    margin: 20px;
+`;
+
+const ProductAmount = styled.div`
+    font-size: 24px;
+    margin: 5px;
+`;
+
+
 //ItemList
 const ProductsContainer = styled.div`
     padding: 30px;
@@ -81,7 +94,7 @@ const ImgContainer = styled.div`
 `;
 
 const ImageDetail = styled.img`
-    width: 100%;
+    width: 112%;
     height:70vh;
     object-fit: cover;
 `;
@@ -156,4 +169,28 @@ const ProductPrice = styled.div`
   font-weight: 200;
 `;
 
-export { ProductsContainer, ProductContainer,Circle, Image, Info, Icon, DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price, WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice }
+const Top = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+`;
+
+const TopButton = styled.button`
+  padding: 10px;
+  font-weight: 600;
+  width: 188px;
+  cursor: pointer;
+  border: ${(props) => props.type === "filled" && "none"};
+  background-color: ${(props) =>
+    props.type === "filled" ? "black" : "gold"};
+  color ${(props) => props.type === "filled" && "white"};
+`;
+
+const TopText = styled.span`
+  margin: 0px 10px;
+  
+`;
+
+
+export { ProductsContainer, ProductContainer,Circle, Image, Info, Icon,ProductAmount, ProductAmountContainer, DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price, WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, TopButton, Top, TopText }

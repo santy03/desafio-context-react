@@ -31,7 +31,7 @@ const products = [
       name: "ZAPATILLAS RUNNING ADIDAS CORERACER NEGRA MUJER",
       stock: 379,
       cost: 10499,
-      description: "las zapatillas ADIDAS Coreracer ofrecen la combinación perfecta de comodidad y estilo. Su diseño liviano y transpirable brinda comodidad en todo momento y el logo adidas Badge of Sport les confiere un look de alto rendimiento. Diseñada para corredoras con pisada neutra.",
+      description: "Las zapatillas ADIDAS Coreracer ofrecen la combinación perfecta de comodidad y estilo. Su diseño liviano y transpirable brinda comodidad en todo momento y el logo adidas Badge of Sport les confiere un look de alto rendimiento. Diseñada para corredoras con pisada neutra.",
       capacity: 700,
       image: [
         "https://cdn.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-running-adidas-coreracer-mujer-negra-100010fx3603001-1.jpg",      
